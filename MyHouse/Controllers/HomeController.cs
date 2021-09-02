@@ -18,12 +18,19 @@ namespace MyHouse.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(bool q)
         {
-            return View();
+            if (q)
+            {
+                return View(5);
+            }
+            else
+            {
+                return View();
+            }
         }
 
-        public IActionResult Privacy()
+        public IActionResult About()
         {
             return View();
         }
